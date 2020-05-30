@@ -1,1 +1,4 @@
-
+filename:
+  entities:
+    - SampleData1
+    - SampleData2
