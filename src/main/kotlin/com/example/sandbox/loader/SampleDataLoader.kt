@@ -31,7 +31,7 @@ class SampleDataLoader(private val sampleDataNameProperties: SampleDataNamePrope
         try {
             run {
                 val inputStream: InputStream =
-                        FileInputStream("/excel/$name.xlsx")
+                        javaClass.getResourceAsStream("/excel/$name.xlsx")
                 val wb = XSSFWorkbook(inputStream)
                 val sheet: XSSFSheet = wb.getSheetAt(0)
                 val rows: Iterator<Row> = sheet.rowIterator()
